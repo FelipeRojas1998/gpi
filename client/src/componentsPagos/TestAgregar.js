@@ -197,6 +197,26 @@ export default function FormDialog() {
     }
   };
 
+  const controlarIngreso = () => {
+    var z = false
+    if(monto > remanente){
+      z = true
+    }
+    return z;
+  }
+
+  const controlarMonto = async () => { 
+    var y = false
+    if(monto == 0){
+      y = true
+    }
+    if(y == true){
+      alert("Monto no puede ser 0")
+      handleCloseTwo();
+    }
+  }
+
+
   return (
     <div>
       <div>
