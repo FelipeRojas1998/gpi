@@ -98,7 +98,7 @@ router.post("/createConvenioC", (req, res) => {
     (afiliado_rut_afiliado = '19771819-8'), 
     (convenio_id_conv = '8'),
     (nombre_convenio = 'convenio 1'),
-    (comentario_postulacion = '    '),
+    (comentario_postulacion = '  '),
     db.query(
         "INSERT INTO convenio_afiliado (afiliado_rut_afiliado, convenio_id_conv, nombre_convenio, comentario_postulacion) VALUES (?, ?, ?, ?)",
         [afiliado_rut_afiliado, convenio_id_conv, nombre_convenio, comentario_postulacion],

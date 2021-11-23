@@ -46,6 +46,17 @@ const columns = [
       backgroundColor: "#23BB77",
     },
   },
+
+  {
+    title: "Estado",
+    field: "Estado_conv_c",
+    headerStyle: {
+      backgroundColor: "#23BB77",
+    },
+    
+  },
+
+  
   
   
 ];
