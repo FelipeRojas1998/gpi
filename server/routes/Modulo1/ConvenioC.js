@@ -27,6 +27,7 @@ router.post("/createConvenioC", (req, res) => {
           }
         }
       );
+      
   });
   //Mostrar convenios comercial
   router.get("/showConvenioC", (req, res) => {
@@ -48,6 +49,10 @@ router.post("/createConvenioC", (req, res) => {
         res.send(result);
       }
     });
+
+    
+
+
   });
   
   //Editar convenios comercial

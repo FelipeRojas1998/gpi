@@ -260,7 +260,7 @@ function ConvenioFinanciero() {
         name="estado"
         variant= "standard"
         onChange={handleChange}
-        value={convenioFSelect && convenioFSelect.Estado_conv_d}
+        value={convenioFSelect && convenioFSelect.estado}
       />
 
       <br />

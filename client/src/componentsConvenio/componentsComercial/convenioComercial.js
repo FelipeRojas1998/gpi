@@ -248,7 +248,7 @@ function ConvenioComercial() {
         name="estado"
         variant= "standard"
         onChange={handleChange}
-        value={convenioCSelect && convenioCSelect.Estado_conv_d}
+        value={convenioCSelect && convenioCSelect.estado}
       />
       <br />
       <div align="right">
