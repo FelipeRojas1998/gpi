@@ -47,15 +47,7 @@ const columns = [
     },
   },
 
-  {
-    title: "Estado",
-    field: "Estado_conv_c",
-    headerStyle: {
-      backgroundColor: "#23BB77",
-    },
-    
-  },
-
+ 
   
   
   
