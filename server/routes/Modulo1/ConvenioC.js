@@ -93,7 +93,7 @@ router.post("/createConvenioC", (req, res) => {
     );
   });
 
-  router.post("/createPostulacion", (req, res) => {
+  /*router.post("/createPostulacion", (req, res) => {
     console.log(req.body);
     (convenio_id_conv = '1'),
     (afiliado_rut_afiliado = '10698199-K'), 
@@ -112,7 +112,29 @@ router.post("/createConvenioC", (req, res) => {
         }
       );
   });
+*/
 
+router.post("/createPostulacion", (req, res) => {
+  console.log(req.body);
+  (convenio_id_conv = req.body.convenio_id_conv),
+  (afiliado_rut_afiliado = req.body.afiliado_rut_afiliado), 
+  (nombre_convenio = req.body.nombre_convenio),
+  (comentario_postulacion = req.body.comentario_postulacion),
+  (estado_postulacion = 'pendiente'),
+
+
+  db.query(
+      "INSERT INTO convenio_afiliado (convenio_id_conv, afiliado_rut_afiliado, nombre_convenio, comentario_postulacion, estado_postulacion) VALUES (?, ?, ?, ?, ?)",
+      [convenio_id_conv, afiliado_rut_afiliado, nombre_convenio, comentario_postulacion, estado_postulacion],
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+          res.send("Valores Insertados");
+        }
+      }
+    );
+});
   router.get("/showPostulaciones", (req, res) => {
     db.query("SELECT * FROM convenio_afiliado", (err, result) => {
       if (err) {

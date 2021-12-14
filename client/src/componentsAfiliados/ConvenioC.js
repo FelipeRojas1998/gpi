@@ -129,12 +129,15 @@ function ConvenioC() {
   const [nombre_convenio, setnombre_convenio] = useState("");
   const [comentario_postulacion, setcomentario_postulacion] = useState(0);
 
+
   const peticionPostulacion = async () => {
     Axios.post(`http://localhost:3001/createPostulacion`, {
     afiliado_rut_afiliado: afiliado_rut_afiliado, 
     convenio_id_conv: convenio_id_conv,
     nombre_convenio: nombre_convenio,
     comentario_postulacion: comentario_postulacion,
+
+
   }).then((response) => {
         // Esto hacía que al apretar postular el convenio se eliminará.
         /* setListConvenioC(

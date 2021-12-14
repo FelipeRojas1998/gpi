@@ -102,6 +102,8 @@ function AdmPostulaciones1() {
     await Axios.get("http://localhost:3001/showPostulaciones")
       .then((response) => {
         setListConvenioC(response.data);
+        
+
         console.log(response.data);
       })
       .catch((error) => {
